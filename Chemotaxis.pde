@@ -1,27 +1,28 @@
 Bacteria fun = new Bacteria();
 Bacteria [] colony;
-int i;
+// int i;
 
  void setup()   
  {     
  	//initialize bacteria variables here   
- 	size(1300,800);
+ 	size(800,800);
  	background(203, 102, 136);
- 	colony = new Bacteria [20];
- 	for (int i=0; i < colony.length; i++)
+ 	colony = new Bacteria [30];
+
+ 	for (int j = 0; j < colony.length; j++)
  	{
- 		colony[i] = new Bacteria();
+ 		colony[j] = new Bacteria();
  	}
  }   
  void draw()   
  {    
- 	//move and show the bacteria   
- 	fun.show();
- 	fun.walk();
- 	for (int i = 0; i<colony.length; i++);
- 	{
- 		colony[i].walk();
- 		colony[i].show();
+ 	//move and show the bacteria
+ 	background(203, 102, 136);   
+
+	for (int i = 0; i < colony.length; i++)
+	{
+		colony[i].walk();
+		colony[i].show();
 	}
 
  }  
@@ -30,13 +31,13 @@ int i;
  	//lots of java!   
  	int myX, myY;
  	{
- 		myX = 650;
- 		myY = 400;
+ 		myX = (int)(Math.random()*401);
+ 		myY = (int)(Math.random()*401)-200;
  	}
  	void walk()
  	{
- 		myX = myX + (int)(Math.random()*3)-1;
- 		myY = myY + (int)(Math.random()*3)-1;
+ 		myX = myX + (int)(Math.random()*11)-5;
+ 		myY = myY + (int)(Math.random()*11)-5;
  	}
  	void show()
  	{
