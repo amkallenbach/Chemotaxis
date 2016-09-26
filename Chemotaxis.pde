@@ -30,6 +30,7 @@ Bacteria [] colony;
  {     
  	//lots of java!   
  	int myX, myY;
+ 	Bacteria()
  	{
  		myX = (int)(Math.random()*1000);
  		myY = (int)(Math.random()*1000);
